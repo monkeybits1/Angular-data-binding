@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" placeholder="Enter a name here" ng-model="yourName" ng-init="yourName='Mike'">
+      <hr>
+      <h3>two way data-binding: {{yourName}}</h3>
+      <h3>one way data-binding: {{::yourName}}</h3>
+      <p>Note: Changes in view layer will not update to model for one way data binding</p>
+    </div>
+  </body>
+</html>
