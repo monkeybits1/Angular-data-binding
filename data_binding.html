@@ -8,15 +8,21 @@
       <label>Name:</label>
       <input type="text" placeholder="Enter a name here" ng-model="yourName" ng-init="yourName='Mike'">
       <hr>
-      <h3>two way data-binding: {{yourName}}</h3>
-      <h3>one way data-binding by double column: {{::yourName}}</h3>
-      <h3>one way data-binding by ng-bind directive: <span ng-bind="myName""></span></h3>
-      <p>Note: Changes in view layer will not update to model for one way data binding</p>
+      <h3>two-way data-binding: {{yourName}}</h3>
+      <h3>one-time data-binding by double column: {{::yourName}}</h3>
+      <h3>one-way data-binding by ng-bind directive: <span ng-bind="myName""></span></h3>
+      <button ng-click="click()">click</button> <span>click to change model to 'Julia'</span>
+      <p>Note: flow for one-way/one-time data binding is from model to view only</p>
+      <p>Angular 1.5 component's one way data binding '<': to be continued...</p>
     </div>
     <script>
       var app = angular.module('myApp', []);
       app.controller('myCtrl', ['$scope', function($scope){
         $scope.myName = 'john';
+        $scope.click = function(){
+          $scope.myName = 'Julia';
+          $scope.yourName = 'Julia';
+        }
       }])
     </script>
   </body>
