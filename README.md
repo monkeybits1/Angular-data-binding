@@ -1,5 +1,5 @@
 # Angular-data-binding
-Reference on angular data binding
+Reference on angularJS data binding
 
 
 Here are some codes that I want to share with coding lovers:
